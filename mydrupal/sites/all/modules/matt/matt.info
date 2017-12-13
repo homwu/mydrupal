@@ -1,0 +1,5 @@
+name = "Matt's Module"
+description = "This is Matt's module"
+core = 7.x
+package = "Develop"
+version = 7.x-1.x

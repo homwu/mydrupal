@@ -1,0 +1,25 @@
+<?php 
+/**
+ * implements hook_menu
+ */
+function matt_menu() {
+  $items['matt'] = array(
+    'title' => "Matt's Page",
+    'page callback' => "show_matt_page",
+    'access arguments' => array('access content'),
+    'file' => 'includes/matt.matt_page.inc',
+    'type' => MENU_CALLBACK
+  );
+
+  return $items;
+}
+
+function matt_help($path, $arg) {
+$output = ''; //declare your output variable
+switch ($path) {
+case "?q=admin/help/matt":
+$output = '<p>'. t("Displays help content of matt module") .'</p>';
+break;
+}
+return $output;
+} // function matt_help
